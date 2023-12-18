@@ -13,7 +13,7 @@ const Home = () => {
                 {/* carosel start */}
                     <OwlCarousel items={1} autoPlay loop={1} dots className="owl-carousel header-carousel position-relative owl-theme">
                         <div className="owl-carousel-item position-relative">
-                            <img className="img-fluid" src="assets/img/carousel-1.jpg" alt="" />
+                            <img className="img-fluid" src="assets/img/banner.jpg" alt="" />
                             <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style={{ background: "rgba(24, 29, 56, .7)" }}>
                                 <div className="container">
                                     <div className="row justify-content-start">
@@ -29,7 +29,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="owl-carousel-item position-relative">
-                            <img className="img-fluid" src="assets/img/carousel-2.jpg" alt="" />
+                            <img className="img-fluid" src="assets/img/banner2.jpg" alt="" />
                             <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style={{ background: "rgba(24, 29, 56, .7)" }}>
                                 <div className="container">
                                     <div className="row justify-content-start">

@@ -11,6 +11,7 @@ import About from './Pages/About.jsx';
 import Contact from './Pages/Contact.jsx';
 import Courses from './Pages/Courses.jsx';
 import NotFount from './Pages/NotFount.jsx';
+import Cart from './Pages/Cart.jsx';
 
 
 const router = createBrowserRouter([
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "courses",
         element: <Courses></Courses>
+      },
+      {
+        path: "cart",
+        element: <Cart></Cart>
       },
       {
         path: "*",

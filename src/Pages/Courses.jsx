@@ -1,6 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+import Course from "../Component/Course";
 
 const Courses = () => {
+    const [course, setcourse] = useState([]);
+    useEffect(() => {
+      fetch('http://localhost:8080/productsall')
+          .then(res => res.json())
+          .then(data => setcourse(data)) ;
+  }, []);
     return (
         <div>
             <>
@@ -90,8 +100,10 @@ const Courses = () => {
 
                     </div>
                 </div>
-                {/* Categories Start */}
-                {/* Courses Start */}
+                {/* Categories end */}
+
+                {/* Services Start */}
+
                 <div className="container-xxl py-5">
                 <div className="container">
                     <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -99,102 +111,28 @@ const Courses = () => {
                         <h1 className="mb-5">Popular Courses</h1>
                     </div>
                     <div className="row g-4 justify-content-center">
-                        <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <div className="course-item bg-light">
-                                <div className="position-relative overflow-hidden">
-                                    <img className="img-fluid" src="assets/img/course-1.jpg" alt="" />
-                                    <div className="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                        <a href="#" className="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style={{ borderRadius: "30px 0 0 30px" }}>Read More</a>
-                                        <a href="#" className="flex-shrink-0 btn btn-sm btn-primary px-3" style={{ borderRadius: "0 30px 30px 0" }}>Join Now</a>
-                                    </div>
-                                </div>
-                                <div className="text-center p-4 pb-0">
-                                    <h3 className="mb-0">$149.00</h3>
-                                    <div className="mb-3">
-                                        <small className="fa fa-star text-primary"></small>
-                                        <small className="fa fa-star text-primary"></small>
-                                        <small className="fa fa-star text-primary"></small>
-                                        <small className="fa fa-star text-primary"></small>
-                                        <small className="fa fa-star text-primary"></small>
-                                        <small>(123)</small>
-                                    </div>
-                                    <h5 className="mb-4">Web Design & Development Course for Beginners</h5>
-                                </div>
-                                <div className="d-flex border-top">
-                                    <small className="flex-fill text-center border-end py-2"><i className="fa fa-user-tie text-primary me-2"></i>John Doe</small>
-                                    <small className="flex-fill text-center border-end py-2"><i className="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
-                                    <small className="flex-fill text-center py-2"><i className="fa fa-user text-primary me-2"></i>30 Students</small>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                            <div className="course-item bg-light">
-                                <div className="position-relative overflow-hidden">
-                                    <img className="img-fluid" src="assets/img/course-2.jpg" alt="" />
-                                    <div className="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                        <a href="#" className="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style={{ borderRadius: "30px 0 0 30px" }}>Read More</a>
-                                        <a href="#" className="flex-shrink-0 btn btn-sm btn-primary px-3" style={{ borderRadius: "0 30px 30px 0" }}>Join Now</a>
-                                    </div>
-                                </div>
-                                <div className="text-center p-4 pb-0">
-                                    <h3 className="mb-0">$149.00</h3>
-                                    <div className="mb-3">
-                                        <small className="fa fa-star text-primary"></small>
-                                        <small className="fa fa-star text-primary"></small>
-                                        <small className="fa fa-star text-primary"></small>
-                                        <small className="fa fa-star text-primary"></small>
-                                        <small className="fa fa-star text-primary"></small>
-                                        <small>(123)</small>
-                                    </div>
-                                    <h5 className="mb-4">Web Design & Development Course for Beginners</h5>
-                                </div>
-                                <div className="d-flex border-top">
-                                    <small className="flex-fill text-center border-end py-2"><i className="fa fa-user-tie text-primary me-2"></i>John Doe</small>
-                                    <small className="flex-fill text-center border-end py-2"><i className="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
-                                    <small className="flex-fill text-center py-2"><i className="fa fa-user text-primary me-2"></i>30 Students</small>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                            <div className="course-item bg-light">
-                                <div className="position-relative overflow-hidden">
-                                    <img className="img-fluid" src="assets/img/course-3.jpg" alt="" />
-                                    <div className="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                        <a href="#" className="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style={{ borderRadius: "30px 0 0 30px" }}>Read More</a>
-                                        <a href="#" className="flex-shrink-0 btn btn-sm btn-primary px-3" style={{ borderRadius: "0 30px 30px 0" }}>Join Now</a>
-                                    </div>
-                                </div>
-                                <div className="text-center p-4 pb-0">
-                                    <h3 className="mb-0">$149.00</h3>
-                                    <div className="mb-3">
-                                        <small className="fa fa-star text-primary"></small>
-                                        <small className="fa fa-star text-primary"></small>
-                                        <small className="fa fa-star text-primary"></small>
-                                        <small className="fa fa-star text-primary"></small>
-                                        <small className="fa fa-star text-primary"></small>
-                                        <small>(123)</small>
-                                    </div>
-                                    <h5 className="mb-4">Web Design & Development Course for Beginners</h5>
-                                </div>
-                                <div className="d-flex border-top">
-                                    <small className="flex-fill text-center border-end py-2"><i className="fa fa-user-tie text-primary me-2"></i>John Doe</small>
-                                    <small className="flex-fill text-center border-end py-2"><i className="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
-                                    <small className="flex-fill text-center py-2"><i className="fa fa-user text-primary me-2"></i>30 Students</small>
-                                </div>
-                            </div>
-                        </div>
+                   
+                        
+                      {
+                        course.map( item =>
+                             <Course data={item}></Course>
+                         )
+                      }
+
                     </div>
                 </div>
             </div>
-                {/* Courses End */}
-                {/* Testimonial Start */}
-                <div className="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+                {/* Services End */}
+
+      {/* <!-- Testimonial Start --> */}
+      <div className="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div className="container">
                     <div className="text-center">
                         <h6 className="section-title bg-white text-center text-primary px-3">Testimonial</h6>
                         <h1 className="mb-5">Our Students Say!</h1>
                     </div>
-                    <div className="owl-carousel testimonial-carousel position-relative">
+
+                    <OwlCarousel autoPlay  className=" owl-theme owl-carousel testimonial-carousel position-relative" loop margin={1}>
                         <div className="testimonial-item text-center">
                             <img className="border rounded-circle p-2 mx-auto mb-3" src="assets/img/testimonial-1.jpg" style={{ width: "80px", height: "80px" }} />
                             <h5 className="mb-0">Client Name</h5>
@@ -227,7 +165,7 @@ const Courses = () => {
                                 <p className="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
                             </div>
                         </div>
-                    </div>
+                    </OwlCarousel>
                 </div>
             </div>
                 {/* Testimonial End */}
